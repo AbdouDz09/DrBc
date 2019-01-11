@@ -4,7 +4,7 @@ const prefix = "?";
 
 // ========================================== [ CONSTRUCTERS ] =========================================
 
-var adminprefix = "4";
+var adminprefix = "?";
 const devs = ['461468630773661699'];
 client.on('message', message => {//Toxic Codes
     var argresult = message.content.split(` `).slice(1).join(' ');//Toxic Code
