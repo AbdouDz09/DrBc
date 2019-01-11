@@ -4,14 +4,49 @@ const prefix = "?";
 
 // ========================================== [ CONSTRUCTERS ] =========================================
 
-client.on("ready", async() => {
-    client.user.setGame("Loading...");
-console.log(`Back Online In ${client.guilds.size} Servers!`);
-console.log(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=8\nInvite Me To Your Server!`);
-    setTimeout(() => {
-        client.user.setActivity(`${prefix}help | V 1.1`, {type: "WATCHING"});
-    }, 3000);
+var adminprefix = "4";
+const devs = ['461468630773661699'];
+client.on('message', message => {//Toxic Codes
+    var argresult = message.content.split(` `).slice(1).join(' ');//Toxic Code
+  if (message.content.startsWith(adminprefix + 'setg')) {
+    client.user.setGame(argresult);
+      message.channel.send(`**✅   ${argresult}**`)
+  } else 
+  if (message.content.startsWith(adminprefix + 'setw')) {
+  client.user.setActivity(argresult, {type:'WATCHING'});//Toxic Codes
+      message.channel.send(`**✅   ${argresult}**`)//Toxic Codes
+  } else 
+  if (message.content.startsWith(adminprefix + 'setl')) {
+  client.user.setActivity(argresult , {type:'LISTENING'});
+      message.channel.send(`**✅   ${argresult}**`)//Toxic Codes
+  } else 
+  if (message.content.startsWith(adminprefix + 'sets')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/abdoufersaoui_dz");
+      message.channel.send(`**✅**`)//Toxic Codes
+  }
+  if (message.content.startsWith(adminprefix + 'setname')) {
+  client.user.setUsername(argresult).then
+      message.channel.send(`Changing The Name To ..**${argresult}** `)
+} else
+if (message.content.startsWith(adminprefix + 'setavatar')) {//Toxic Codes
+  client.user.setAvatar(argresult);
+    message.channel.send(`Changing The Avatar To :**${argresult}** `);//Toxic Codes
+}
+});//Toxic Codes
+
+
+
+client.on('ready', () => {
+   console.log(`----------------`);
+      console.log(`Desert Bot- Script By : EX Clan`);
+        console.log(`----------------`);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
+    console.log(`----------------`);
+  console.log(`Logged in as ${client.user.tag}!`);
 });
+
+
+
 
 // ========================================== [ BROADCAST COMMANDS ] ====================================
 
