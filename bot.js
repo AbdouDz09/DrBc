@@ -5,30 +5,29 @@ const prefix = "?";
 // ========================================== [ CONSTRUCTERS ] =========================================
 
 var adminprefix = "?";
-const devs = ['461468630773661699'];
 client.on('message', message => {//Toxic Codes
     var argresult = message.content.split(` `).slice(1).join(' ');//Toxic Code
   if (message.content.startsWith(adminprefix + 'setg')) {
     client.user.setGame(argresult);
       message.channel.send(`**✅   ${argresult}**`)
   } else 
-  if (message.content.startsWith(adminprefix + 'setw')) {
+  if (message.content.startsWith(adminprefix + 'wat')) {
   client.user.setActivity(argresult, {type:'WATCHING'});//Toxic Codes
       message.channel.send(`**✅   ${argresult}**`)//Toxic Codes
   } else 
-  if (message.content.startsWith(adminprefix + 'setl')) {
+  if (message.content.startsWith(adminprefix + 'liz')) {
   client.user.setActivity(argresult , {type:'LISTENING'});
       message.channel.send(`**✅   ${argresult}**`)//Toxic Codes
   } else 
-  if (message.content.startsWith(adminprefix + 'sets')) {
+  if (message.content.startsWith(adminprefix + 'ste')) {
     client.user.setGame(argresult, "https://www.twitch.tv/abdoufersaoui_dz");
       message.channel.send(`**✅**`)//Toxic Codes
   }
-  if (message.content.startsWith(adminprefix + 'setname')) {
+  if (message.content.startsWith(adminprefix + 'name')) {
   client.user.setUsername(argresult).then
       message.channel.send(`Changing The Name To ..**${argresult}** `)
 } else
-if (message.content.startsWith(adminprefix + 'setavatar')) {//Toxic Codes
+if (message.content.startsWith(adminprefix + 'avatar')) {//Toxic Codes
   client.user.setAvatar(argresult);
     message.channel.send(`Changing The Avatar To :**${argresult}** `);//Toxic Codes
 }
