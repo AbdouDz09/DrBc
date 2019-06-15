@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = "?";
+const prefix = "+";
 
 // ========================================== [ CONSTRUCTERS ] =========================================
 
-var adminprefix = "?";
+var adminprefix = "+";
 const devs = ['461468630773661699'];
 client.on('message', message => {//Toxic Codes
     var argresult = message.content.split(` `).slice(1).join(' ');//Toxic Code
@@ -12,23 +12,23 @@ client.on('message', message => {//Toxic Codes
     client.user.setGame(argresult);
       message.channel.send(`**✅   ${argresult}**`)
   } else 
-  if (message.content.startsWith(adminprefix + 'wat')) {
+  if (message.content.startsWith(adminprefix + 'setw')) {
   client.user.setActivity(argresult, {type:'WATCHING'});//Toxic Codes
       message.channel.send(`**✅   ${argresult}**`)//Toxic Codes
   } else 
-  if (message.content.startsWith(adminprefix + 'liz')) {
+  if (message.content.startsWith(adminprefix + 'setl')) {
   client.user.setActivity(argresult , {type:'LISTENING'});
       message.channel.send(`**✅   ${argresult}**`)//Toxic Codes
   } else 
-  if (message.content.startsWith(adminprefix + 'ste')) {
+  if (message.content.startsWith(adminprefix + 'sett')) {
     client.user.setGame(argresult, "https://www.twitch.tv/abdoufersaoui_dz");
       message.channel.send(`**✅**`)//Toxic Codes
   }
-  if (message.content.startsWith(adminprefix + 'name')) {
+  if (message.content.startsWith(adminprefix + 'setname')) {
   client.user.setUsername(argresult).then
       message.channel.send(`Changing The Name To ..**${argresult}** `)
 } else
-if (message.content.startsWith(adminprefix + 'avatar')) {//Toxic Codes
+if (message.content.startsWith(adminprefix + 'setavatar')) {//Toxic Codes
   client.user.setAvatar(argresult);
     message.channel.send(`Changing The Avatar To :**${argresult}** `);//Toxic Codes
 }
